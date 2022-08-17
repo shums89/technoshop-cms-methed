@@ -1,7 +1,7 @@
 import { tableGoods } from "./elems.js";
 import { currencyFormatRUB } from "./utils.js";
 
-const renderRow = ({ id, title, category, price }) => {
+export const renderRow = ({ id, title, category, price }) => {
   const rowGoods = document.createElement('tr');
   rowGoods.classList.add('table-row', 'table-goods-item');
   rowGoods.dataset.id = id;
