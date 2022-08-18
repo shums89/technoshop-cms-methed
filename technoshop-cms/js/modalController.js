@@ -37,7 +37,7 @@ export const modalController = ({ btn, delegation }) => {
   }
 
   modal.addEventListener('click', ({ target }) => {
-    if (target === modal || target.classList.contains(classClose)) {
+    if (target === modal || target.classList.contains('btn-close')) {
       closeModal();
     }
   });
