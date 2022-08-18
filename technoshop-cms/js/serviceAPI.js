@@ -1,7 +1,7 @@
 import { API_URI } from './const.js';
 
-export const getGoods = async () => {
-  const response = await fetch(`${API_URI}/goods/?nopage=true`);
+export const getGoods = async (id) => {
+  const response = await fetch(`${API_URI}/api/goods/${id ? id : '?nopage=true'}`);
 
   if (response.ok) {
     return response.json()
@@ -11,7 +11,7 @@ export const getGoods = async () => {
 };
 
 export const postGoods = async (data) => {
-  const response = await fetch(`${API_URI}/goods`, {
+  const response = await fetch(`${API_URI}/api/goods`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const postGoods = async (data) => {
 };
 
 export const getCategory = async () => {
-  const response = await fetch(`${API_URI}/category`);
+  const response = await fetch(`${API_URI}/api/category`);
 
   if (response.ok) {
     return response.json()
