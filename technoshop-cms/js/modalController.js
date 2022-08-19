@@ -12,6 +12,8 @@ const openModal = (id) => {
 export const closeModal = () => {
   modal.classList.remove('d-block');
   form.reset();
+  form.id.value = '';
+  form.imagesave.value = '';
   hidePreview();
 };
 
